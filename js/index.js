@@ -42,9 +42,46 @@ const libros = [{
 
 //Tu codigo JS va acá
 
+//FUNCION PARA FILTRAR
+function filtrarAutor(libros, autor) {
+let filtrados = [];
 
+for (let i = 0; i < libros.length; i++) {
+    if (libros[i].autor === autor) {
+    filtrados.push(libros[i]);
+    }
+}
 
+return filtrados;
+}
 
+//FUNCION PARA MOSTRAR
+function MostrarFiltrados() {
+let select = document.getElementById("autor");
+let autorSeleccionado = select.value;
 
+let resultado = filtrarAutor(libros, autorSeleccionado);
 
+let contenedor = document.getElementById("libros");
+contenedor.innerHTML = "";
 
+for (let i = 0; i < resultado.length; i++) {
+    if (resultado[i] !== undefined) {
+    contenedor.innerHTML += `
+        <div>
+        <h4>${resultado[i].titulo}</h4>
+        <p>${resultado[i].autor}</p>
+        <p>$${resultado[i].precio}</p>
+        <img src="${resultado[i].url}">
+        </div>
+    `;
+    }
+}
+}
+//EVENTO
+if (typeof document !== "undefined") {
+let select = document.getElementById("autor");
+select.onchange = MostrarFiltrados;
+}
+
+module.exports = { filtrarAutor, libros };

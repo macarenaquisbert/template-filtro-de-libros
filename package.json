@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "jest": "^30.3.0"
+  },
+  "name": "template-filtro-de-libros",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "devDependencies": {},
+  "scripts": {
+  "test": "jest"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rosinni/template-filtro-de-libros.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rosinni/template-filtro-de-libros/issues"
+  },
+  "homepage": "https://github.com/rosinni/template-filtro-de-libros#readme"
+}
